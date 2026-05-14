@@ -1,0 +1,46 @@
+import {auth} from "./auth.js";
+
+
+const email_input = document.querySelector("#email-input");
+const password_input = document.querySelector("#password-input");
+const name_input = document.querySelector("#name-input");
+const phone_input = document.querySelector("#phone-input");
+const register_btn = document.querySelector("#register-btn");
+const select_type = document.querySelector("#select-type");
+const register_err = document.querySelector("#register-err");
+
+register_btn.addEventListener('click', e => {
+    e.preventDefault();
+    submit_form();
+});
+
+async function submit_form() {
+    const t = select_type.value || '';
+    const data = {
+        email: email_input.value || '',
+        password: password_input.value || '',
+        name: name_input.value || '',
+        phone: phone_input.value || '',
+        type: t
+        
+    };
+    register_err.textContent = '';
+    try {
+        await auth.register(data);
+        window.location.replace("../index.html?registration=true");
+    } catch(err) {
+        console.log(err);
+        let message = err.message || 'Registration Failed';
+
+        
+        if(message.includes('validation failed:')) {
+            //Remove the start of the error message
+            message = message.split('validation failed: ')[1];
+            //if there are multiple error messages, only take the first one
+            message = message.split(',')[0];
+            //finally, remove the start of the individual error message
+            if(message.includes(': ')) message = message.split(': ')[1];
+        }
+        register_err.textContent = message;
+    }
+}

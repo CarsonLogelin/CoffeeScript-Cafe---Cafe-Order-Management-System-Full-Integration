@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CoffeeScript Caf&eacute;</title>
+    <script type="module" src="../scripts/register.js"></script>
+</head>
+<body>
+    <h1>CoffeeScript Caf&eacute;</h1>
+    <h2>Register</h2>
+    <form>
+        <fieldset style="border:none">
+            <label>Email</label>
+            <input type="text" id="email-input">
+        </fieldset>
+
+        <fieldset style="border:none">
+            <label>Password</label>
+            <input type="text" id="password-input">
+        </fieldset>
+
+        <fieldset style="border:none">
+            <label>Name</label>
+            <input type="text" id="name-input">
+        </fieldset>
+
+        <fieldset style="border:none">
+            <label>Phone Number</label>
+            <input type="text" id="phone-input">
+        </fieldset>
+
+        <fieldset style="border:none">
+            <label>Account Type</label>
+            <select id="select-type">
+                <option>Customer</option>
+                <option>Staff</option>
+            </select>
+        </fieldset>
+        <p id="register-err"></p>
+        <input type="submit" value="Register" id="register-btn">
+        <p>Already have an account? <a href="../index.html">Sign in</a> now!</p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./routes/orders.js"></script>
+</head>
+
+<body>
+    <label for="itemAmount">
+    </label>
+    <form action="/orders" method="POST">
+        <input type="hidden" name="baristaId" value="B123">
+        <input type="hidden" name="status" value="pending">
+        <input type="hidden" name="createdBy" value="Customer">
+
+        <div id="selectContainer">
+            <!-- Dynamic selects will be injected here -->
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    <br>
+
+    <script>
+        
+        
+        const menuOptions = [
+            { id: "65001", name: "Espresso" },
+            { id: "65002", name: "Latte" },
+            { id: "65003", name: "Cappuccino" },
+            { id: "65004", name: "Croissant" }
+        ];
+
+        function generateSelects() {
+            const amount = document.getElementById('itemAmount').value;
+            const container = document.getElementById('selectContainer');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            container.innerHTML = ''; // Clear previous fields
+
+            if (amount > 0) {
+                submitBtn.style.display = 'block'; // Show submit button
+            }
+
+            for (let i = 0; i < amount; i++) {
+                const div = document.createElement('div');
+                div.className = 'item-row';
+                
+                div.innerHTML = `
+                    <label>Item ${i + 1}: </label>
+                    <select name="itemIds" required>
+                        <option value="">-- Choose an Item --</option>
+                        ${menuOptions.map(opt => `<option value="${opt.id}">${opt.name}</option>`).join('')}
+                    </select>
+                `;
+                
+                container.appendChild(div);
+            }
+        }
+    </script>
+</body>
+
+</html>
