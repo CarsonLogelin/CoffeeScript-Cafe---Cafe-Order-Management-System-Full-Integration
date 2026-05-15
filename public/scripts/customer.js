@@ -9,6 +9,12 @@ const app = {
 
   init() {
     console.log("Customer page loaded");
+    if (!auth.isAuthenticated()) {
+    window.location.replace('../index.html');
+    return;
+  }
+    const customer = auth.getCustomer();
+    document.querySelector('h1').textContent = `Welcome, ${customer.name}!`;
     this.setupEventListeners();
   },
 
