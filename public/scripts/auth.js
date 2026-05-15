@@ -8,9 +8,9 @@ export const auth = {
   },
 
   // Get stored student data
-  getUser() {
-    const userData = localStorage.getItem('user');
-    return userData ? JSON.parse(userData) : null;
+  getCustomer() {
+    const customerData = localStorage.getItem('customer');
+    return customerData ? JSON.parse(customerData) : null;
   },
 
   getStudent(){
