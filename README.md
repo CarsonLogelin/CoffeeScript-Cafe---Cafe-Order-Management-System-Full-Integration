@@ -44,7 +44,7 @@ This API is designed for a cafe order management system that handles customer in
 #### /pages/customer.html
 - Created a page that will have Customer Dashboard UI mechanics that will let the customer interact with viewing menu items, creating orders, viewing orders, and logging out.
 #### README.md
-- Wrote most of the README.md file. 
+- Created the GitHub Repository and wrote most of the README.md file. 
 
 ## List of implemented functionalities.
 - User account registration (both for customers and staff members)
