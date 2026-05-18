@@ -20,6 +20,13 @@ This API is designed for a cafe order management system that handles customer in
 #### [Primary Responsibilities]
 - 
 ## List of implemented functionalities.
-- 
+- Allows a user to register an account
+- Allows user to login using an email and password
+- Password is encrypted and stored
+- The user can choose between a staff or customer account
+- Customer can access the menu and make orders
+- Staff can access the menu and add, remove, or edit items
+- Staff can access a list of customers and edit or remove them
+- Menu page allows users to filter by type of item, and also allows them to search for items by name
 ## Server setup (how to start your server)
 1. 
