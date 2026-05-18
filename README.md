@@ -12,7 +12,9 @@ This API is designed for a cafe order management system that handles customer in
 - 
 ### Carson Logelin
 #### /pages/staff.html
-- Created a page that features a staff dashboard allowing staff members to access pages which allow them to edit the menu, manage customers, manage orders, and logout
+- Created a page that features a staff dashboard allowing staff members to access pages which allow them to edit the menu, manage customers, manage orders, and logout.
+#### /scripts/staff.js
+- Created js file to add functionality to the staff page UI elements.
 ### Benjamin Li
 #### /pages/orders.html
 - Created an order page that display the menus for the customer can order from and place an order in the same page.
