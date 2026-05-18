@@ -17,6 +17,8 @@ This API is designed for a cafe order management system that handles customer in
 - Created js file to add functionality to the staff page UI elements.
 #### /pages/manageCustomers.html
 - Created a page which displays a list of all customers and allows for customers to be edited or deleted.
+#### /scripts/manageCustomers.js
+- Created js file which gathers a list of customers and displays them. This file also adds event listeners to all buttons and the page, and it enables the user to edit or delete customers.
 ### Benjamin Li
 #### /pages/orders.html
 - Created an order page that display the menus for the customer can order from and place an order in the same page.
