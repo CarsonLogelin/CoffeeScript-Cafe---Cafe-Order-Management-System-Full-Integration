@@ -38,7 +38,7 @@ This API is designed for a cafe order management system that handles customer in
 
 ### Andrew Yang
 #### /script/customer.js
-- Created Customer Dashbaord UI mechanics that lets the customer viewing menu items, creating orders, viewing orders, and logging out.
+- Created Customer Dashboard UI mechanics that lets the customer viewing menu items, creating orders, viewing orders, and logging out.
 #### /pages/customer.html
 - Created a page that will have Customer Dashboard UI mechanics that will let the customer interact with viewing menu items, creating orders, viewing orders, and logging out.
 #### README.md
